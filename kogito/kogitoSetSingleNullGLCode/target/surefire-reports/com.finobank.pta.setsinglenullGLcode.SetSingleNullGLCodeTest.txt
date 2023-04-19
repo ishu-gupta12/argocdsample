@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.finobank.pta.setsinglenullGLcode.SetSingleNullGLCodeTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 25.725 s - in com.finobank.pta.setsinglenullGLcode.SetSingleNullGLCodeTest

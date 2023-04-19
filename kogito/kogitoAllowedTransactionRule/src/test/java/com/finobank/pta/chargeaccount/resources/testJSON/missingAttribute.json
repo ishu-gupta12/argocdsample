@@ -1,0 +1,7 @@
+{
+	"checkRequest": {
+	"appId" : "FINOTLR",
+	"tranType" : "DHAPIMPS",
+	"productCode" : "1003"
+	}
+}

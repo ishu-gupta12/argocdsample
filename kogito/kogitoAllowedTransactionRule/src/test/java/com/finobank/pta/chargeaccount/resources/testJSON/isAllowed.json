@@ -1,0 +1,8 @@
+{
+	"checkRequest": {
+	"appId" : "FINOTLR",
+	"userClass" : "SYSTEMUSR4",
+	"tranType" : "DHAPIMPS",
+	"productCode" : "1003"
+	}
+}

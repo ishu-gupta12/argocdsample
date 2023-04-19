@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ChargeTierRequest.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">chargeAccountRule</a> &gt; <a href="index.source.html" class="el_package">com.finobank.pta.chargetier</a> &gt; <span class="el_source">ChargeTierRequest.java</span></div><h1>ChargeTierRequest.java</h1><pre class="source lang-java linenums">package com.finobank.pta.chargetier;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.text.ParseException;
+
+public class ChargeTierRequest {
+<span class="fc" id="L12">    private static final Logger logger = LoggerFactory.getLogger(ChargeTierRequest.class);</span>
+
+    private String uniqueTransactionId;
+    private String chargeID;
+    private double transactionAmount;
+<span class="fc" id="L17">    private ChargeTierResponse apiResponse = new ChargeTierResponse();</span>
+
+<span class="fc" id="L19">    public ChargeTierRequest() {</span>
+
+<span class="fc" id="L21">    }</span>
+
+    public String getUniqueTransactionId() {
+<span class="fc" id="L24">        return uniqueTransactionId;</span>
+    }
+
+    public void setUniqueTransactionId(String uniqueTransactionId) {
+<span class="fc" id="L28">        this.uniqueTransactionId = uniqueTransactionId;</span>
+<span class="fc" id="L29">    }</span>
+
+    public String getChargeID() {
+<span class="fc" id="L32">        return chargeID;</span>
+    }
+
+    public void setChargeID(String chargeID) {
+<span class="fc" id="L36">        this.chargeID = chargeID;</span>
+<span class="fc" id="L37">    }</span>
+
+    public double getTransactionAmount() {
+<span class="fc" id="L40">        return transactionAmount;</span>
+    }
+
+    public void setTransactionAmount(double transactionAmount) {
+<span class="fc" id="L44">        this.transactionAmount = transactionAmount;</span>
+<span class="fc" id="L45">    }</span>
+
+    /**
+     * @return the apiResponse
+     */
+    public ChargeTierResponse getApiResponse() {
+<span class="fc" id="L51">        return apiResponse;</span>
+    }
+
+    /**
+     * @param apiResponse the apiResponse to set
+     */
+    public void setApiResponse(ChargeTierResponse apiResponse) {
+<span class="nc" id="L58">        this.apiResponse = apiResponse;</span>
+<span class="nc" id="L59">    }</span>
+
+    public void setChargeDetails(String chargetype) {
+<span class="fc" id="L62">        this.apiResponse.setUniqueTransactionId(this.getUniqueTransactionId());</span>
+<span class="fc" id="L63">        this.apiResponse.setChargeID(this.getChargeID());</span>
+<span class="fc" id="L64">        this.apiResponse.setChargeType(chargetype);</span>
+<span class="fc" id="L65">        this.apiResponse.setTransactionAmount(transactionAmount);</span>
+<span class="fc" id="L66">    }</span>
+
+    public void setRealChargeValue(final double chargevalue) {
+<span class="fc" id="L69">        this.apiResponse.setRealChargeValue(chargevalue);</span>
+<span class="fc" id="L70">    }</span>
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

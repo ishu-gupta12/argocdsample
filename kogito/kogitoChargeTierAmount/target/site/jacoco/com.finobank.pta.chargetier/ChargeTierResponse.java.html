@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ChargeTierResponse.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">chargeAccountRule</a> &gt; <a href="index.source.html" class="el_package">com.finobank.pta.chargetier</a> &gt; <span class="el_source">ChargeTierResponse.java</span></div><h1>ChargeTierResponse.java</h1><pre class="source lang-java linenums">package com.finobank.pta.chargetier;
+
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
+public class ChargeTierResponse {
+
+    private String uniqueTransactionId;
+    private String chargeID;
+    private double transactionAmount;
+    private double chargeAmount;
+    private String chargeType;
+    
+
+<span class="fc" id="L15">    public ChargeTierResponse() {</span>
+
+<span class="fc" id="L17">    }</span>
+
+
+    public String getUniqueTransactionId() {
+<span class="fc" id="L21">        return uniqueTransactionId;</span>
+    }
+
+
+    public void setUniqueTransactionId(String uniqueTransactionId) {
+<span class="fc" id="L26">        this.uniqueTransactionId = uniqueTransactionId;</span>
+<span class="fc" id="L27">    }</span>
+
+
+    public String getChargeID() {
+<span class="fc" id="L31">        return chargeID;</span>
+    }
+
+
+    public void setChargeID(String chargeID) {
+<span class="fc" id="L36">        this.chargeID = chargeID;</span>
+<span class="fc" id="L37">    }</span>
+
+
+    public double getTransactionAmount() {
+<span class="fc" id="L41">        return transactionAmount;</span>
+    }
+
+
+    public void setTransactionAmount(double transactionAmount) {
+<span class="fc" id="L46">        this.transactionAmount = transactionAmount;</span>
+<span class="fc" id="L47">    }</span>
+
+
+    public double getChargeAmount() {
+<span class="fc" id="L51">        return chargeAmount;</span>
+    }
+
+
+    public void setChargeAmount(double chargeAmount) {
+<span class="nc" id="L56">        this.chargeAmount = chargeAmount;</span>
+<span class="nc" id="L57">    }</span>
+
+    public String getChargeType() {
+<span class="fc" id="L60">        return chargeType;</span>
+    }
+
+
+    public void setChargeType(String chargeType) {
+<span class="fc" id="L65">        this.chargeType = chargeType;</span>
+<span class="fc" id="L66">    }</span>
+
+
+    // public void setChargeDetails(final ChargeTierRequest request, String chargetype) {
+    //     this.uniqueTransactionId = request.getUniqueTransactionId();
+    //     this.chargeID = request.getChargeID();
+    //     this.chargeType = chargetype;
+    //     this.transactionAmount = request.getTransactionAmount();
+    // }
+
+
+    public void setRealChargeValue(final double chargevalue) {
+<span class="pc bpc" id="L78" title="1 of 2 branches missed.">        if (this.chargeType.equals(&quot;P&quot;)) {</span>
+<span class="nc" id="L79">            this.chargeAmount = round(this.transactionAmount * (chargevalue/100),2);</span>
+        } else {
+<span class="fc" id="L81">            this.chargeAmount = chargevalue;</span>
+        }
+<span class="fc" id="L83">    }</span>
+
+    private static double round(double value, int places) {
+<span class="nc bnc" id="L86" title="All 2 branches missed.">        if (places &lt; 0) throw new IllegalArgumentException();</span>
+    
+<span class="nc" id="L88">        BigDecimal bd = BigDecimal.valueOf(value);</span>
+<span class="nc" id="L89">        bd = bd.setScale(places, RoundingMode.HALF_UP);</span>
+<span class="nc" id="L90">        return bd.doubleValue();</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

@@ -1,0 +1,6 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+chargeAccountRule,org.kie.kogito.app,HotReloadSupportClass,0,3,0,0,0,1,0,1,0,1
+chargeAccountRule,com.finobank.pta.chargetier,MyAgendaEventListener,0,19,0,0,0,6,0,3,0,3
+chargeAccountRule,com.finobank.pta.chargetier,ChargeTierRequest,4,61,0,0,2,21,1,11,1,11
+chargeAccountRule,com.finobank.pta.chargetier,ChargeTierCalculatorUnit,0,13,0,0,0,5,0,3,0,3
+chargeAccountRule,com.finobank.pta.chargetier,ChargeTierResponse,32,43,3,1,7,18,4,11,2,11

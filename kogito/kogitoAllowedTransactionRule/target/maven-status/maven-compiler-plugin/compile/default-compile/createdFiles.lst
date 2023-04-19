@@ -1,0 +1,4 @@
+com/finobank/pta/allowedtransaction/CheckAllowedTransactionRequest.class
+com/finobank/pta/allowedtransaction/CheckAllowedTransactionUnit.class
+com/finobank/pta/allowedtransaction/MyAgendaEventListener.class
+com/finobank/pta/allowedtransaction/CheckAllowedTransactionResponse.class

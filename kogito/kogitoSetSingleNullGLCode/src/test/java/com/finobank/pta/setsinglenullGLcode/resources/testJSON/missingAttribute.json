@@ -1,0 +1,8 @@
+
+{
+	"singleCodeRequest": {
+	"userClass" : "SYSTEMUSER4",
+	"tranType" : "PCMIMPS",
+	"flagDebitCredit" : "C"
+	}
+}

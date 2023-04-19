@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>SetSingleNullGLCodeRequest.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">chargeAccountRule</a> &gt; <a href="index.source.html" class="el_package">com.finobank.pta.setsinglenullGLcode</a> &gt; <span class="el_source">SetSingleNullGLCodeRequest.java</span></div><h1>SetSingleNullGLCodeRequest.java</h1><pre class="source lang-java linenums">package com.finobank.pta.setsinglenullGLcode;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+public class SetSingleNullGLCodeRequest {
+<span class="fc" id="L13">    private static final Logger logger = LoggerFactory.getLogger(SetSingleNullGLCodeRequest.class);</span>
+
+    private String flagDebitCredit;
+    private String tranType;
+    private String appId;
+    private String userClass;
+    private String accountOrGLCode;
+    private Map&lt;String, String&gt; apiResponse;
+
+<span class="fc" id="L22">    public SetSingleNullGLCodeRequest() {</span>
+
+<span class="fc" id="L24">    }</span>
+
+    // public SetSingleNullGLCodeRequest(final String userclass, final String appid,
+    // final String trantype, final String flagdebitcredit) {
+    // this.flagDebitCredit = flagdebitcredit;
+    // this.appId = appid;
+    // this.userClass = userclass;
+    // this.tranType = trantype;
+    // }
+
+    public String getFlagDebitCredit() {
+<span class="fc" id="L35">        return flagDebitCredit;</span>
+    }
+
+    public void setFlagDebitCredit(String flagDebitCredit) {
+<span class="fc" id="L39">        this.flagDebitCredit = flagDebitCredit;</span>
+<span class="fc" id="L40">    }</span>
+
+    public String getTranType() {
+<span class="fc" id="L43">        return tranType;</span>
+    }
+
+    public void setTranType(String tranType) {
+<span class="fc" id="L47">        this.tranType = tranType;</span>
+<span class="fc" id="L48">    }</span>
+
+    public String getAppId() {
+<span class="fc" id="L51">        return appId;</span>
+    }
+
+    public void setAppId(String appId) {
+<span class="fc" id="L55">        this.appId = appId;</span>
+<span class="fc" id="L56">    }</span>
+
+    public String getUserClass() {
+<span class="fc" id="L59">        return userClass;</span>
+    }
+
+    public void setUserClass(String userClass) {
+<span class="fc" id="L63">        this.userClass = userClass;</span>
+<span class="fc" id="L64">    }</span>
+
+    /**
+     * @return the accountOrGLCode
+     */
+    public String getAccountOrGLCode() {
+<span class="nc" id="L70">        return accountOrGLCode;</span>
+    }
+
+    /**
+     * @param accountOrGLCode the accountOrGLCode to set
+     */
+    public void setAccountOrGLCode(String accountOrGLCode) {
+<span class="fc" id="L77">        this.accountOrGLCode = accountOrGLCode;</span>
+<span class="fc" id="L78">        this.apiResponse = new HashMap&lt;String, String&gt;();</span>
+<span class="fc" id="L79">        this.apiResponse.put(&quot;accountOrGLCode&quot;, this.accountOrGLCode);</span>
+<span class="fc" id="L80">    }</span>
+
+    /**
+     * @return the apiResponse
+     */
+    public Map&lt;String, String&gt; getApiResponse() {
+<span class="fc" id="L86">        return apiResponse;</span>
+    }
+
+    /**
+     * @param apiResponse the apiResponse to set
+     */
+    public void setApiResponse(Map&lt;String, String&gt; apiResponse) {
+<span class="nc" id="L93">        this.apiResponse = apiResponse;</span>
+<span class="nc" id="L94">    }</span>
+
+    // public int compareCurrentDate(String inputDate)
+    //         throws ParseException {
+    //     logger.info(&quot;InputDate = &quot; + inputDate);
+    //     SimpleDateFormat sdformat = new SimpleDateFormat(&quot;yyyy-MM-dd&quot;);
+    //     String currdate = sdformat.format(new Date());
+    //     logger.info(&quot;currdate = &quot; + currdate);
+    //     Date tranDate = sdformat.parse(currdate);
+    //     logger.info(&quot;tranDate = &quot; + tranDate);
+    //     Date ruleDate = sdformat.parse(inputDate);
+    //     logger.info(&quot;ruleDate = &quot; + ruleDate);
+    //     int compare = tranDate.compareTo(ruleDate);
+    //     logger.info(&quot;compare = &quot; + compare);
+    //     return compare;
+    // }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
