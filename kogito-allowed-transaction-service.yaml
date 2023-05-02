@@ -2,6 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: kogito-allowed-transaction-rule
+  namespace: pipeline-sample
 spec:
   selector:
     app: kogito-allowed-transaction-rule
