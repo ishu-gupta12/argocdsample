@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kogito-allowed-transaction-rule
+  namespace: pipeline-sample 
+  labels:
+    app: kogito-allowed-transaction-rule
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kogito-allowed-transaction-rule
+  template:
+    metadata:
+      labels:
+        app: kogito-allowed-transaction-rule
+    spec:
+      containers:
+      - name: kogito-allowed-transaction-rule
+        #image: registry.ptafinodev.finopaymentbank.in/repository/pta-docker/kogito-allowed-transaction-rule:2022-04-16-2
+        #image: registry.ptafinodev.finopaymentbank.in/repository/pta-docker/kogito-allowed-transaction-rule:2022-06-01
+        #image: registry.ptafinodev.finopaymentbank.in/repository/pta-docker/kogito-allowed-transaction-rule:2022-11-23-1
+        #image: registry.ptafinodev.finopaymentbank.in/repository/pta-docker/kogito-allowed-transaction-rule:2023-01-30-1
+        #image: registry.ptafinodev.finopaymentbank.in/repository/pta-docker/kogito-allowed-transaction-rule:2023-03-16-2
+        #image: registry.ptafinodev.finopaymentbank.in/repository/pta-docker/kogito-allowed-transaction-rule:2023-05-10
+        #image: registry.ptafinodev.finopaymentbank.in/repository/pta-docker/kogito-allowed-transaction-rule:2023-04-16
+        #image: registry.ptafinodev.finopaymentbank.in/repository/pta-docker/kogito-allowed-transaction-rule:2023-04-24
+        #image: registry.ptafinodev.finopaymentbank.in/repository/pta-docker/kogito-allowed-transaction-rule:2023-04-25
+        image: quay.io/aditya_gupta/argocdpipelinesaample:t-1
+        ports:
+        - containerPort: 8080
+      imagePullSecrets:
+      - name: regsecret

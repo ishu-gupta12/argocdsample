@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: kogito-allowed-transaction-rule
+  namespace: pipeline-sample
+spec:
+  rules:
+    - host: microservice.apps.ptafinodev.finopaymentbank.in
+      http:
+        paths:
+          - path: /checkallowedtrantype
+            pathType: Prefix
+            backend:
+              service:
+                name: kogito-allowed-transaction-rule
+                port:
+                  number: 80
