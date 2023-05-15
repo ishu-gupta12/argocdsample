@@ -26,7 +26,7 @@ spec:
         #image: registry.ptafinodev.finopaymentbank.in/repository/pta-docker/kogito-allowed-transaction-rule:2023-04-16
         #image: registry.ptafinodev.finopaymentbank.in/repository/pta-docker/kogito-allowed-transaction-rule:2023-04-24
         #image: registry.ptafinodev.finopaymentbank.in/repository/pta-docker/kogito-allowed-transaction-rule:2023-04-25
-        image: quay.io/aditya_gupta/argocdpipelinesaample:t-1
+        image: quay.io/aditya_gupta/argocdpipelinesaamp
         ports:
         - containerPort: 8080
       imagePullSecrets:
