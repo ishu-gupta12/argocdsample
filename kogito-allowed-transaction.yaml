@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: kogito-allowed-transaction-rule
-  namespace: istio-test
+  namespace: pipeline-sample
   labels:
     app: kogito-allowed-transaction-rule
 spec:
